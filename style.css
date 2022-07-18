@@ -1,0 +1,104 @@
+h2 {
+  color: rgb(93, 107, 121);
+}
+
+.section-container i {
+  color: rgb(50, 168, 177);
+}
+
+.section-container i:hover {
+  color: rgb(93, 107, 121);
+}
+
+#about-me:hover {
+  color: rgb(50, 168, 177);
+}
+
+.profile-pic {
+  margin-left: 57%;
+}
+
+.profile-pic p {
+  font-size: large;
+}
+
+.avatar {
+  width: 200px;
+  margin: 10px 0;
+}
+
+.avatar:hover {
+  box-shadow: -5px 5px 14px 0px #ca6583;
+}
+
+.profile i:hover {
+  color: rgb(54, 251, 238);
+  box-shadow: -5px 5px 14px 0px rgb(54, 251, 238);
+}
+
+#bottom:hover {
+  animation: slideFromBottom 1s ease-in;
+}
+
+#left:hover {
+  animation: slideFromLeft 1s ease-in;
+}
+
+#right:hover {
+  animation: slideFromRight 1s ease-in;
+}
+
+#responsive {
+  width: 335px;
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(-5%);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(5%);
+  }
+}
+
+.transition::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.transition:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.transition::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: rgb(219, 255, 253);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.transition {
+  position: relative;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
